@@ -4,8 +4,7 @@ O que precisamos fazer? quando clicar no botão do personagem na lista, Temos qu
 
 OBJETIVO 1 - quando clicar no botão do personagem na lista, marcar o botao como selecionado
 
-passo 1 pegar os botões no JS pra poder verificar
-quando o usuário clicar em cima de um deles
+passo 1 pegar os botões no JS pra poder verificar quando o usuário clicar em cima de um deles
 passo 2 - adicionar a classe "selecionado" no botão que o usuário clicou
 passo 3 - verificar se já existe um botão selecionado, se sim, devemos remover a seleção dele
 
@@ -24,7 +23,7 @@ a seleção dele
 //OBJETIVO 1 - quando clicar no botão do personagem na lista, marcar o botao como selecionado
 
 //passo 1 pegar os botões no JS pra poder verificar quando o usuário clicar em cima de um deles
-const botoes = document.querySelectorAll(".botao");
+const botoes = document.querySelectorAll('.botao');
 
         //Objetivo 2 quando clicar no botão do personagem mostrar as informações do personagem
 
@@ -34,7 +33,7 @@ const botoes = document.querySelectorAll(".botao");
 
 
 
-botoes.forEach((botao, indice) => {
+    botoes.forEach((botao, indice) =>  {
     botao.addEventListener('click', () => {
 
         //passo 3 - verificar se já existe um botão selecionado, se sim, devemos remover a seleção dele
@@ -46,14 +45,11 @@ botoes.forEach((botao, indice) => {
 
         //passo 3 verificar se já exista um personagem selecionado, se sim, devemos removera seleção dele
         const personagemSelecionado = document.querySelector(".personagem.selecionado");
-        personagemSelecionado.classList.remove(selecionado);
-        
+        personagemSelecionado.classList.remove("selecionado");
+           
        // passo 2 - adicionar a classe "selecionado" no personagem que o usuário selecionou
        personagens[indice].classList.add("selecionado");
 
     })
 });
 
-botoes.addEventListener("click", () => { 
-     console.log("clicou no botão");
-})
